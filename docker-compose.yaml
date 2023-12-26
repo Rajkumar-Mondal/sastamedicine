@@ -1,0 +1,66 @@
+version: '3.5'
+
+services:
+  sastamedicine-postgres:
+    container_name: sastamedicine-postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+      PGDATA: /data/postgres
+    volumes:
+      - ./.data/postgres:/data/postgres
+    ports:
+      - "5432:5432"
+  
+  # sastamedicine-pgadmin:
+  #   container_name: sastamedicine-pgadmim
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+  #     PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+  #     PGADMIN_CONFIG_SERVER_MODE: 'False'
+  #   volumes:
+  #     - ./data/pgadmin:/var/lib/pgadmin
+
+  #   ports:
+  #     - "${PGADMIN_PORT:-5050}:80"
+
+  
+  # sastamedicine-backend:
+  #   container_name: sastamedicine-backend
+  #   build:
+  #     dockerfile: DockerFile
+  #     context: apps/backend
+  #     # Only will build development stage from our dockerfile
+  #     target: development
+  #   volumes:
+  #     - ./apps/backend:/usr/src/app:cached
+  #     - backend_node_modules:/usr/src/app/node_modules
+  #   # Run in Debug Mode: npm run start:debug --> Don't forget to start your vscode debugger!
+  #   # Run in dev Mode: npm run start:dev
+  #   command: npm run start:debug
+  #   depends_on: 
+  #     - sastamedicine-postgres
+  #     - sastamedicine-mongo
+  #   environment:
+  #     DATABASE_NAME: sastamedicine-dev-backend
+  #     POSTGRES_HOST: sastamedicine-postgres
+  #     POSTGRES_PORT: 5432
+  #     POSTGRES_USER: ${POSTGRES_USER:-postgres}
+  #     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
+  #     MONGO_PROTOCOL: mongodb
+  #     MONGO_HOST: sastamedicine-mongo:27017
+  #     MONGO_USERNAME: ${MONGODB_USER:-mongodb}
+  #     MONGO_PASSWORD: ${MONGODB_PASSWORD:-password}
+  #     NODE_ENV: development
+  #     JWT_SECRET: it-is-very-hard-to-guess-so-i-am-secured
+  #     NODE_PORT: 3000
+  #   ports:
+  #     - 8881:3000
+  #     - 9229:9229 # debugging port
+
+volumes:
+  postgres:
+  # pgadmin:
+  # backend_node_modules:
