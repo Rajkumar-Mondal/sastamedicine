@@ -1,9 +1,9 @@
 # Use node alpine as it's a small node image
-FROM node:18-alpine as sastamedicine-backend
+FROM node:18-alpine as sastamedicine-frontend
 
 # Create the directory on the node image 
 # where our app will live
-WORKDIR /opt/app/backend
+WORKDIR /opt/app/frontend
 
 # Copy package.json and package-lock.json
 # to the /app working directory

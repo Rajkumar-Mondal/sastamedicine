@@ -1,6 +1,9 @@
 version: '3.5'
 
 services:
+  ##########
+  # Database
+  ##########
   sastamedicine-postgres:
     container_name: sastamedicine-postgres
     image: postgres
@@ -13,6 +16,9 @@ services:
     ports:
       - "5432:5432"
 
+  ##########
+  # Backend
+  ##########
   sastamedicine-backend:
     container_name: sastamedicine-backend
     image: sastamedicine-backend
@@ -34,8 +40,23 @@ services:
     depends_on:
       - sastamedicine-postgres 
 
+  ##########
+  # Frontend
+  ##########
+  sastamedicine-frontend:
+    container_name: sastamedicine-frontend
+    image: sastamedicine-frontend
+    build:
+      context: ./apps/frontend
+      dockerfile: Dockerfile
+      target: sastamedicine-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apps/frontend/src:/opt/app/frontend/src
+
 volumes:
   postgres:
   sastamedicine-backend:
+  sastamedicine-frontend:
   # pgadmin:
-  # backend_node_modules:
