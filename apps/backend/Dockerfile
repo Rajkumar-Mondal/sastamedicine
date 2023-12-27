@@ -16,6 +16,9 @@ RUN set -x && \
 # Copy the rest of our app folder into /app
 COPY . .
 
+# Prisma Client is being initialized
+RUN npx prisma generate
+
 # Make the entrypoint.sh executable
 COPY ./entrypoint.sh /bin/entrypoint.sh
 RUN chmod +x /bin/entrypoint.sh

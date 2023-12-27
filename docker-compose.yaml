@@ -37,6 +37,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
       POSTGRES_DB: sastamedicinedb
+      DATABASE_URL: postgresql://postgres:password@localhost:5432/sastamedicinedb?schema=public
     depends_on:
       - sastamedicine-postgres 
 
