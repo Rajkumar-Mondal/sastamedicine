@@ -1,5 +1,5 @@
 # Use node alpine as it's a small node image
-FROM node:20.10-alpine as sastamedicine-frontend
+FROM node:20.10-alpine as sastamedicine-backend
 
 # Create the directory on the node image 
 # where our app will live
