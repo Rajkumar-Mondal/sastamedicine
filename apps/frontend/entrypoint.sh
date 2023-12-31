@@ -1,5 +1,7 @@
 #!/bin/sh
 
-echo "======================Frontend-Start===================="
+# Print a startup message
+echo "Starting my application..."
 
-yarn dev
+# Run the yarn dev command
+exec yarn dev

@@ -5,7 +5,7 @@ import { PrismaClient } from '@prisma/client';
 export class PrismaService extends PrismaClient {
 
   constructor(){
-    console.log(process.env)
+    // console.log(process.env)
     super({
       datasources:{
         db:{
