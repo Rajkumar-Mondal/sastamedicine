@@ -90,21 +90,12 @@ To run tests, run the following command
 | Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
 | Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
 
-
-## Badges
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
-
+# Hi, I'm Rajkumar Mondal! 👋
 
 ## 🚀 About Me
 “I started my career in Software Development after graduating with a B.tech degree in 2022. I’ve spent
 my entire career at Vara Technology, receiving 3 promotions and 4 awards for outstanding performance.
-I’m looking to join a company now to take on more leadership and accuquired skills”
-
-# Hi, I'm Rajkumar Mondal! 👋
-
+I’m looking to join a company now to take on more leadership and acquired skills”
 
 ## 🛠 Skills
 HTML, CSS, Javascript, React.js, Next.js, Angular.js, Nest.js, MySql, PostgreSQL
