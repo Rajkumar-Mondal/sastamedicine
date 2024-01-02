@@ -34,3 +34,41 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Basic Component Skeleton
+
+import React from "react";
+// Material UI
+
+// Material UI Icons
+
+// Other
+
+/*
+	This file is responsible for the first view of this project .
+		Required Contexts
+			ExampleContext:
+				- ContextState - Purpose of this data in this component.
+				- ContextAction - Purpose of this data in this component.
+		Created Contexts
+			- ExampleContext: ExampleContext purpose.
+		Children Components
+			- ExampleComponent
+		- 
+*/
+function ComponentName() {
+  /* Refs */
+  /* Context */
+  /* State */
+  /* Memos */
+  /* Effects */
+  /* Functions */
+  /* Components */
+  return (
+    <React.Fragment>
+      Home
+    </React.Fragment>
+  );
+}
+
+export default ComponentName;
