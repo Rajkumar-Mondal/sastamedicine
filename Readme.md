@@ -64,7 +64,7 @@ To Visit the project
 
 ## Tech Stack
 
-**Client:** Next.js, TailwindCSS, MUI
+**Client:** Next.js, MUI
 
 **Server:** Nest.js
 
